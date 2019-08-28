@@ -23,7 +23,11 @@ class TodoList extends Component {
         <h1>Тута</h1>
         { data.length > 0 ? data.map((toDo, index) => {
           console.log('2',data)
-          return <p key={index}>{toDo.title}</p>
+          return (
+            <div key={index}>
+             <h3>{toDo.title}</h3>
+             <p>{toDo.body}</p>
+            </div>)
         }) : null
         }
         
